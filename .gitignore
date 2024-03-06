@@ -529,3 +529,5 @@ issues.md
 bootstrap/ssr
 
 postgresql
+rr
+.rr.yaml
