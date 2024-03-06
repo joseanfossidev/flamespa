@@ -1,0 +1,9 @@
+{
+    "eslint.debug": true,
+    "eslint.format.enable": true,
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+    ]
+}

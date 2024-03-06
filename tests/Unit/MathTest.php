@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../../app/Utils/math.php';
+require_once __DIR__.'/../../app/Utils/math.php';
 
 describe('Math', function () {
     it('should sum two numbers', function () {

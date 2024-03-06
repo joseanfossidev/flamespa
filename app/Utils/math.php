@@ -1,17 +1,21 @@
 <?php
 
-function sum ($a, $b) {
+function sum($a, $b)
+{
     return $a + $b;
 }
 
-function sub ($a, $b) {
+function sub($a, $b)
+{
     return $a - $b;
 }
 
-function mul ($a, $b) {
+function mul($a, $b)
+{
     return $a * $b;
 }
 
-function div ($a, $b) {
+function div($a, $b)
+{
     return $a / $b;
 }
