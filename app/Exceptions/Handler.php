@@ -24,7 +24,7 @@ class Handler extends ExceptionHandler
     public function register(): void
     {
         $this->reportable(function (Throwable $e) {
-            if ($this->app->environment('production')) {
+            if (app()->environment('production') && $this->shouldReport($e)) {
                 if (app()->bound('sentry')) {
                     app('sentry')->captureException($e);
                 }
