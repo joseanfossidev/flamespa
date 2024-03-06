@@ -74,7 +74,7 @@ class PostgreSql extends DbDumper
             $command[] = '-T '.implode(' -T ', $this->excludeTables);
         }
 
-        // return $this->echoToFile('docker exec -i flamespa-postgresql ' . implode(' ', $command), $dumpFile);
+        // return $this->echoToFile(implode(' ', $command), $dumpFile);
         return $this->echoToFile('docker exec -i flamespa-postgresql pg_dump -U user -p 5432 flamespa > /Users/geekha/Desktop/src/flamespa/storage/app/backup-temp/temp/db-dumps/postgresql-flamespa.sql', $dumpFile);
     }
 
