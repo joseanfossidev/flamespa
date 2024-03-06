@@ -6,9 +6,12 @@
         "build": "vite build && vite build --ssr",
         "lint": "eslint ./resources/js --ext .js,.jsx",
         "lint:fix": "eslint ./resources/js --ext .js,.jsx --fix",
+        "lint:php": "composer lint",
         "test": "vitest run",
         "test:watch": "vitest --watch",
-        "test:coverage": "vitest run --coverage"
+        "test:coverage": "vitest run --coverage",
+        "test:php": "composer test",
+        "prepare": "husky"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
@@ -25,6 +28,7 @@
         "eslint-plugin-n": "^16.6.2",
         "eslint-plugin-promise": "^6.1.1",
         "eslint-plugin-react": "^7.34.0",
+        "husky": "^9.0.11",
         "jsdom": "^24.0.0",
         "laravel-vite-plugin": "^1.0.0",
         "postcss": "^8.4.31",
