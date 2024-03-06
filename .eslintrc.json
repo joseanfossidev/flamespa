@@ -24,6 +24,7 @@
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
         "indent": "off",
-        "react/no-unescaped-entities": "off"
+        "react/no-unescaped-entities": "off",
+        "multiline-ternary": "off"
     }
 }
