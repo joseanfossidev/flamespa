@@ -1,4 +1,5 @@
 <?php
+
 // /Users/geekha/Desktop/src/flamespa/vendor/spatie/db-dumper/src/Databases/PostgreSql.php
 
 namespace Spatie\DbDumper\Databases;
@@ -73,7 +74,6 @@ class PostgreSql extends DbDumper
             $command[] = '-T '.implode(' -T ', $this->excludeTables);
         }
 
-
         // return $this->echoToFile('docker exec -i flamespa-postgresql ' . implode(' ', $command), $dumpFile);
         return $this->echoToFile('docker exec -i flamespa-postgresql pg_dump -U user -p 5432 flamespa > /Users/geekha/Desktop/src/flamespa/storage/app/backup-temp/temp/db-dumps/postgresql-flamespa.sql', $dumpFile);
     }
@@ -144,7 +144,7 @@ class PostgreSql extends DbDumper
     }
 
     /**
-     * @param false|resource $tempFileHandle
+     * @param  false|resource  $tempFileHandle
      */
     public function setTempFileHandle($tempFileHandle): void
     {
