@@ -1,4 +1,5 @@
 {
+    "files.insertFinalNewline": true,
     "eslint.debug": true,
     "eslint.format.enable": true,
     "eslint.codeActionsOnSave.rules": null,
