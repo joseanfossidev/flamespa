@@ -11,6 +11,8 @@
         "test:watch": "vitest --watch",
         "test:coverage": "vitest run --coverage",
         "test:php": "composer test",
+        "backup": "php artisan backup:run",
+        "restore": "php artisan backup:restore",
         "prepare": "husky"
     },
     "devDependencies": {
