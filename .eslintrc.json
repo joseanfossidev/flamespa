@@ -25,6 +25,7 @@
         "react/prop-types": "off",
         "indent": "off",
         "react/no-unescaped-entities": "off",
-        "multiline-ternary": "off"
+        "multiline-ternary": "off",
+        "no-undef": "off"
     }
 }

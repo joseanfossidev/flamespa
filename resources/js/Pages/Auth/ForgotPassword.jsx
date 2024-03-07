@@ -12,7 +12,7 @@ export default function ForgotPassword ({ status }) {
     const submit = (e) => {
         e.preventDefault()
 
-        post(window.route('password.email'))
+        post(route('password.email'))
     }
 
     return (
