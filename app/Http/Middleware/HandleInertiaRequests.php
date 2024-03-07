@@ -3,9 +3,9 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Inertia\Middleware;
 use Tighten\Ziggy\Ziggy;
-use Illuminate\Support\Facades\Session;
 
 class HandleInertiaRequests extends Middleware
 {
