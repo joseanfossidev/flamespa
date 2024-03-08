@@ -12,6 +12,7 @@ const DatatableSearch = ({ searchable, setDatatable }) => {
 
         const url = new URL(window.location.href)
 
+        url.searchParams.set('page', 1)
         url.searchParams.set('search', e.target.value)
 
         router.visit(url.toString(), {
