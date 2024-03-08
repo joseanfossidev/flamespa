@@ -1,20 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Tracking\Configurations\DevicesTypesController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -33,6 +23,27 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // all app routes
+    Route::group(['prefix' => 'app'], function () {
+
+        // all tracking routes
+        Route::group(['prefix' => 'tracking'], function () {
+
+            // all tracking configurations routes
+            Route::group(['prefix' => 'configurations'], function () {
+                Route::resource('devices-types', DevicesTypesController::class)->names([
+                    'index' => 'devices-types.index',
+                    'create' => 'devices-types.create',
+                    'store' => 'devices-types.store',
+                    'show' => 'devices-types.show',
+                    'edit' => 'devices-types.edit',
+                    'update' => 'devices-types.update',
+                    'destroy' => 'devices-types.destroy',
+                ]);
+            });
+        });
+    });
 });
 
 require __DIR__.'/auth.php';
