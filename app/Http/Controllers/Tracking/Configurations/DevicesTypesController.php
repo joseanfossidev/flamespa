@@ -15,8 +15,8 @@ class DevicesTypesController extends Controller
         $this->authorize('index', DeviceType::class);
 
         $decivesTypes = DeviceType::when(request('search'), function ($query, $search) {
-                $query->where('name', 'like', "%$search%");
-            })
+            $query->where('name', 'like', "%$search%");
+        })
             ->paginate(10)
             ->appends(request()->query());
 
