@@ -2,6 +2,10 @@
 
 function sum($a, $b)
 {
+    if (! is_numeric($a) || ! is_numeric($b)) {
+        return 'Error';
+    }
+
     return $a + $b;
 }
 

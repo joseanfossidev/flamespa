@@ -7,6 +7,10 @@ describe('Math', function () {
         expect(sum(2, 2))->toBe(4);
     });
 
+    it('should return error ig any value not is a number', function () {
+        expect(sum(2, false))->toBe('Error');
+    });
+
     it('should subtract two numbers', function () {
         expect(sub(2, 2))->toBe(0);
     });
