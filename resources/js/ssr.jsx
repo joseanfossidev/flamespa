@@ -20,6 +20,9 @@ createServer((page) =>
                 })
 
             return <App {...props} />
+        },
+        progress: {
+            color: '#29d'
         }
     })
 )
