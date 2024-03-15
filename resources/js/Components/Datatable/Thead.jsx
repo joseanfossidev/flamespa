@@ -5,11 +5,11 @@ import handleSelectAll from '@/Utils/Datatable/SelectAll'
 const Thead = ({ config }) => {
     return (
         <thead>
-            <tr className='border-b font-bold border-gray-700 bg-gray-950 text-center'>
+            <tr className='border-b font-bold  text-center border-gray-700 bg-gray-200 dark:bg-gray-950'>
                 {config.selectable && (
                     <th className='w-[30px] text-center'>
                         <input
-                            className='form-checkbox h-5 w-5 text-green-400 transition duration-150 ease-in-out cursor-pointer rounded-md'
+                            className='form-checkbox h-5 w-5 text-sky-400 transition duration-150 ease-in-out cursor-pointer rounded-md'
                             onClick={handleSelectAll}
                             type="checkbox" />
                     </th>

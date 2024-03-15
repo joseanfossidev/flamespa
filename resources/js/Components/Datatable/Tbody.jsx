@@ -6,16 +6,13 @@ const Tbody = ({ config, data }) => {
                 <tr key={deviceType.id}
                     className='
                         border-b cursor-pointer transition-all duration-300 ease-in-out
-                        border-gray-700
-                        hover:bg-gray-700
-                        odd:bg-gray-800
-                        even:bg-gray-900
-                    '
-                >
+                        dark:border-gray-700 dark:hover:bg-gray-700 dark:odd:bg-gray-800 dark:even:bg-gray-900
+                        border-gray-200 hover:bg-gray-200 odd:bg-gray-50 even:bg-gray-0
+                    '>
                     {config.selectable && (
                         <th className='w-[30px] text-center'>
                             <input
-                                className='form-checkbox h-5 w-5 text-green-400 transition duration-150 ease-in-out cursor-pointer rounded-md'
+                                className='form-checkbox h-5 w-5 text-sky-400 transition duration-150 ease-in-out cursor-pointer rounded-md'
                                 type="checkbox" />
                         </th>
                     )}

@@ -1,3 +1,5 @@
+import { Link } from '@inertiajs/react'
+
 const Tfoot = ({ paginate }) => {
     return (
         <div className='flex items-center justify-between mt-4 gap-3'>
@@ -7,7 +9,7 @@ const Tfoot = ({ paginate }) => {
 
             <div className='flex items-center'>
                 {paginate.links && (paginate.links.length > 0) && (paginate.links.filter(link => link.url).map((link, index) => (
-                    <a key={index}
+                    <Link key={index}
                         href={link.url}
                         className={`
                             py-2 px-3 rounded hover:text-blue-700 hover:bg-black hover:bg-opacity-10
@@ -15,7 +17,7 @@ const Tfoot = ({ paginate }) => {
                             ${link.active ? 'text-blue-500 font-bold' : 'text-gray-500'}
                         `}>
                         {link.label.replace('&laquo;', '').replace('&raquo;', '')}
-                    </a>
+                    </Link>
                 )))}
             </div>
         </div>
