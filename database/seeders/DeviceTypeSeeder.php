@@ -11,6 +11,6 @@ class DeviceTypeSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\Tracking\Configurations\DeviceType::factory(10)->create();
+        \App\Models\Tracking\Configurations\DeviceType::factory(100)->create();
     }
 }
