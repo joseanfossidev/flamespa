@@ -21,13 +21,12 @@ const DatatableSearch = ({ searchable, setDatatable }) => {
     }
 
     return searchable && (
-        <div className='mb-4'>
+        <div>
             <input
                 type='text'
-                className='w-full rounded
-                    text-gray-700
-                    border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
-                placeholder='Search...'
+                className='w-full rounded h-10
+                    text-gray-700 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                placeholder='Buscar...'
                 defaultValue={new URL(window.location.href).searchParams.get('search')}
                 onChange={e => handleChange(e)}
             />
