@@ -17,7 +17,7 @@ class DevicesTypesController extends Controller
         $decivesTypes = DeviceType::when(request('search'), function ($query, $search) {
             $query->where('name', 'like', "%$search%");
         })
-            ->paginate(10)
+            ->paginate(request()->query('per_page', 10))
             ->appends(request()->query());
 
         return Inertia::render('App/Tracking/Configurations/DevicesTypes/List', [
