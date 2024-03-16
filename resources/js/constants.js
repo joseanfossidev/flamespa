@@ -84,7 +84,7 @@ export const NAV_MAIN = [
             },
             {
                 title: 'Dispositivos > Tipos',
-                href: '#'
+                href: '/app/tracking/configurations/devices-types'
             },
             {
                 title: 'Dispositivos > Modelos',
