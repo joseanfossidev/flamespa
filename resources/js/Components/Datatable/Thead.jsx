@@ -22,7 +22,7 @@ const Thead = ({ config }) => {
                 {config.columns.map((column, index) => (
                     <th key={index}
                         className={`
-                            px-2 py-1
+                            px-2 py-1 min-w-24
                             ${!column.visible ? 'hidden' : ''}
                             ${column.width ? column.width : ''}
                         `
