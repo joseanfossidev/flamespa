@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Tracking\Configurations\DevicesController;
 use App\Http\Controllers\Tracking\Configurations\DevicesTypesController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Tracking\Configurations\VehiclesController;
 
 Route::middleware('auth')->group(function () {
     Route::group(['prefix' => 'app'], function () {
@@ -26,6 +27,16 @@ Route::middleware('auth')->group(function () {
                     'edit' => 'devices.edit',
                     'update' => 'devices.update',
                     'destroy' => 'devices.destroy',
+                ]);
+
+                Route::resource('vehicles', VehiclesController::class)->names([
+                    'index' => 'vehicles.index',
+                    'create' => 'vehicles.create',
+                    'store' => 'vehicles.store',
+                    'show' => 'vehicles.show',
+                    'edit' => 'vehicles.edit',
+                    'update' => 'vehicles.update',
+                    'destroy' => 'vehicles.destroy',
                 ]);
             });
         });

@@ -68,7 +68,7 @@ export const NAV_MAIN = [
         subnav: [
             {
                 title: 'Móviles',
-                href: '#'
+                href: '/app/tracking/configurations/vehicles'
             },
             {
                 title: 'Móviles > Grupos',

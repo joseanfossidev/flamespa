@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             DeviceTypeSeeder::class,
             DeviceSeeder::class,
+            VehicleSeeder::class,
         ]);
     }
 }
