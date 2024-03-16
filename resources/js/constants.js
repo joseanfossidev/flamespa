@@ -76,7 +76,7 @@ export const NAV_MAIN = [
             },
             {
                 title: 'Dispositivos',
-                href: '#'
+                href: '/app/tracking/configurations/devices'
             },
             {
                 title: 'Dispositivos > Eventos',

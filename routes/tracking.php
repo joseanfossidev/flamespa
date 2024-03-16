@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Tracking\Configurations\DevicesController;
 use App\Http\Controllers\Tracking\Configurations\DevicesTypesController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +17,17 @@ Route::middleware('auth')->group(function () {
                     'update' => 'devices-types.update',
                     'destroy' => 'devices-types.destroy',
                 ]);
+
+                Route::resource('devices', DevicesController::class)->names([
+                    'index' => 'devices.index',
+                    'create' => 'devices.create',
+                    'store' => 'devices.store',
+                    'show' => 'devices.show',
+                    'edit' => 'devices.edit',
+                    'update' => 'devices.update',
+                    'destroy' => 'devices.destroy',
+                ]);
             });
         });
     });
 });
-
-require __DIR__.'/auth.php';
