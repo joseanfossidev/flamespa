@@ -10,7 +10,7 @@ const Tfoot = ({ paginate }) => {
             </div>
 
             <div className='flex items-center'>
-                {paginate.links && (paginate.links.length > 0) && (paginate.links.filter(link => link.url).map((link, index) => (
+                {(paginate.links && paginate.links.length > 3) && (paginate.links.length > 0) && (paginate.links.filter(link => link.url).map((link, index) => (
                     <Link key={index}
                         href={link.url}
                         className={`
