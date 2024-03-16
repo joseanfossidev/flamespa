@@ -5,14 +5,15 @@ namespace App\Models\Tracking\Configurations;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Device extends Model
+class DeviceVehicle extends Model
 {
     use HasFactory;
 
-    protected $table = 'tracking_devices';
+    protected $table = 'tracking_devices_vehicles';
 
     protected $fillable = [
-        'name',
-        'code',
+        'device_id',
+        'vehicle_id',
+        'status',
     ];
 }
