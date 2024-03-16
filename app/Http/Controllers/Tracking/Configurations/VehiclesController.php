@@ -13,11 +13,10 @@ class VehiclesController extends Controller
     {
         $this->authorize('index', Vehicle::class);
 
-        $vehicles = Vehicle::
-            when(request('search'), function ($query, $search) {
-                $query
-                    ->where('patent', 'like', "%$search%");
-            })
+        $vehicles = Vehicle::when(request('search'), function ($query, $search) {
+            $query
+                ->where('patent', 'like', "%$search%");
+        })
             ->paginate(request()->query('per_page', 20))
             ->appends(request()->query());
 

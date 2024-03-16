@@ -2,13 +2,13 @@
 
 namespace App\Providers;
 
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Models\Tracking\Configurations\Device;
 use App\Models\Tracking\Configurations\DeviceType;
+use App\Models\Tracking\Configurations\Vehicle;
 use App\Policies\Tracking\Configurations\DevicePolicy;
 use App\Policies\Tracking\Configurations\DeviceTypePolicy;
-use App\Models\Tracking\Configurations\Vehicle;
 use App\Policies\Tracking\Configurations\VehiclePolicy;
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {

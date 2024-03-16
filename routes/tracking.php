@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Tracking\Configurations\DevicesController;
 use App\Http\Controllers\Tracking\Configurations\DevicesTypesController;
 use App\Http\Controllers\Tracking\Configurations\VehiclesController;
+use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
     Route::group(['prefix' => 'app'], function () {

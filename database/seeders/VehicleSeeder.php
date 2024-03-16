@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 class VehicleSeeder extends Seeder
 {
     private $records = [
-        ['patent' => 'ABC123']
+        ['patent' => 'ABC123'],
     ];
 
     /**
