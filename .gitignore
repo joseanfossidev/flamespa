@@ -531,3 +531,5 @@ bootstrap/ssr
 postgresql
 rr
 .rr.yaml
+problems.txt
+commands.txt
