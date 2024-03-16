@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Tracking\Configurations;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Tracking\Configurations\StoreDeviceTypeRequest;
+use App\Http\Requests\Tracking\Configurations\DevicesTypes\StoreDeviceTypeRequest;
 use App\Models\Tracking\Configurations\DeviceType;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -17,7 +17,7 @@ class DevicesTypesController extends Controller
         $decivesTypes = DeviceType::when(request('search'), function ($query, $search) {
             $query->where('name', 'like', "%$search%");
         })
-            ->paginate(request()->query('per_page', 10))
+            ->paginate(request()->query('per_page', 20))
             ->appends(request()->query());
 
         return Inertia::render('App/Tracking/Configurations/DevicesTypes/List', [
