@@ -10,13 +10,13 @@ class DeviceSeeder extends Seeder
     private $records = [
         [
             'device_type_id' => 1,
-            'name' => 'Device 1',
-            'number_avl' => '1234567890',
-            'number_imei' => '1234567890',
-            'phone_number' => '1234567890',
-            'network_provider' => 'Network Provider 1',
-            'network_bandwith' => 'Network Bandwith 1',
-            'provider_supplier' => 'Provider Supplier 1',
+            'name' => 'GV55W001',
+            'number_avl' => 'AVL001',
+            'number_imei' => 'IMEI001',
+            'phone_number' => '+569001',
+            'network_provider' => 'Claro',
+            'network_bandwith' => '50MB',
+            'provider_supplier' => 'Global Network',
         ],
     ];
 

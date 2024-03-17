@@ -22,6 +22,6 @@ class VehicleSeeder extends Seeder
             $vehicle->save();
         }
 
-        Vehicle::factory()->count(100)->create();
+        // Vehicle::factory()->count(100)->create();
     }
 }
